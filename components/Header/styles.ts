@@ -20,10 +20,11 @@ export const LeftSide = styled.div`
 export const InputBox = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 0.7rem;
+  justify-content: center;
   background: var(--bg-primary);
   height: 40px;
-  width: 230px;
+  width: 200px;
   border-radius: 45px;
 `;
 
@@ -36,7 +37,7 @@ export const Search = styled.input`
 
   &::placeholder {
     color: var(--color);
-    font-size: 1.1em;
+    font-size: 0.9em;
   }
 `;
 
