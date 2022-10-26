@@ -31,12 +31,7 @@ const Status: React.FC = () => {
     e.preventDefault();
 
     if (text) {
-      setStatus([
-        ...status,
-        {
-          status: text,
-        },
-      ]);
+      setStatus([...status, text]);
       setText("");
     } else {
       return;

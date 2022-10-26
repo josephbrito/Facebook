@@ -24,7 +24,7 @@ const Post: React.FC = () => {
               <span>José</span>
             </Info>
 
-            <Message>{s.status}</Message>
+            <Message>{s}</Message>
 
             <Division />
 

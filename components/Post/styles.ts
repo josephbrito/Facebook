@@ -19,6 +19,7 @@ export const PostContainer = styled.div`
 
 export const Info = styled.div`
   display: flex;
+  gap: 1rem;
 `;
 
 export const Message = styled.p`

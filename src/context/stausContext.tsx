@@ -1,31 +1,19 @@
-import {
-  useState,
-  createContext,
-  Dispatch,
-  SetStateAction,
-  ReactNode,
-  useContext,
-} from "react";
+import { useState, createContext, ReactNode, useContext } from "react";
 
-type PropsStatusContext = {
+interface IPropsStatusContext {
   status: string[];
-  setStatus: Dispatch<SetStateAction<any>>;
-};
+  setStatus: (arg: string[]) => void;
+}
 
 const DEFAULT_VALUE = {
   status: [],
   setStatus: () => {},
 };
 
-interface Props {
-  children: ReactNode;
-}
+const Status = createContext<IPropsStatusContext>(DEFAULT_VALUE);
 
-const Status = createContext<PropsStatusContext>(DEFAULT_VALUE);
-
-export function StatusProvider({ children }: Props) {
-  const [status, setStatus] = useState(DEFAULT_VALUE.status);
-  console.log(status);
+export function StatusProvider({ children }: { children: React.ReactNode }) {
+  const [status, setStatus] = useState<string[]>(DEFAULT_VALUE.status);
 
   return (
     <Status.Provider value={{ status, setStatus }}>{children}</Status.Provider>
