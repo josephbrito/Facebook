@@ -1,7 +1,5 @@
 ## Clone UI Facebook
 
-### 🚧 em desenvolvimento
-
 #### Techs:
 
 - NextJS
