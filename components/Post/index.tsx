@@ -12,13 +12,13 @@ import { RiShareForwardFill } from "react-icons/ri";
 import { Division } from "../HomePageLeft/styles";
 
 const Post: React.FC = () => {
-  const { status, setStatus } = useStatus();
+  const { status } = useStatus();
 
   return (
     <Container>
       {status &&
         status.map((s) => (
-          <PostContainer>
+          <PostContainer key={status.length - 1}>
             <Info>
               <Image src="/images/avatar.jpg" height="40" width="40" />
               <span>José</span>
